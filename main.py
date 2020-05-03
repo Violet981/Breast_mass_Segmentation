@@ -524,6 +524,7 @@ def evaluate():
 
 
     ###======================= EVALUATION =============================###
+    Total_dice = 0
     for im in range(len(valid_lr_imgs)):
         start_time = time.time()
         in_im=valid_lr_imgs[im]
@@ -533,9 +534,10 @@ def evaluate():
 
         #print("LR size: %s /  generated HR size: %s" % (size, out.shape))  # LR size: (339, 510, 3) /  gen HR size: (1, 1356, 2040, 3)
         print("[*] save images")
-        tl.vis.save_images(out,[0], image_path = save_dir + '/valid_gen_'+str(im)+'.png')
-        tl.vis.save_images(valid_lr_imgs,[im], image_path = save_dir + '/valid_im_'+str(im)+'.png')
-        tl.vis.save_images(valid_hr_imgs,[im], image_path = save_dir + '/valid_mask_'+str(im)+'.png')
+
+        imageio.imwrite(save_dir + '/valid_gen_'+str(im)+'.png', out[0])
+        imageio.imwrite(save_dir + '/valid_im_'+str(im)+'.png', valid_lr_imgs[im])
+        imageio.imwrite(save_dir + '/valid_mask_'+str(im)+'.png', valid_hr_imgs[im])
 
 if __name__ == '__main__':
     import argparse
