@@ -519,7 +519,7 @@ def evaluate():
 
     # restore model from .ckpt
     saver = tf.train.Saver()
-    saver = tf.train.import_meta_graph(checkpoint_dir +'/model_init_srgan_9.ckpt.meta')
+    #saver = tf.train.import_meta_graph(checkpoint_dir +'/model_init_srgan_9.ckpt.meta')
     saver.restore(sess, checkpoint_dir +'/model_srgan_55.ckpt')
 
 
