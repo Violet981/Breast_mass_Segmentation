@@ -5,7 +5,7 @@ This repository contains code for SegNet-cGAN and UNET-cGAN for Breast Mammograp
 This repo is originated from [GAN_breast_mammography_segmentation](https://github.com/ankit-ai/GAN_breast_mammography_segmentation)
 
 ### Modificatoin:
-1. Changed the dataset from CBIS-DDSM to INbreast(http://medicalresearch.inescporto.pt/breastresearch/index.php/Get_INbreast_Database). You need to access to it by signing an Agreement. 
+1. Did not use CBIS-DDSM as the original repo. Instead, using INbreast(http://medicalresearch.inescporto.pt/breastresearch/index.php/Get_INbreast_Database) as dataset. You need to access to it by signing an Agreement. 
 2. Some codes in the original main.py file were anotated however they were essential to make it. Little changes in the main.py file.
 
 ### Training Process:
